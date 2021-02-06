@@ -1,17 +1,35 @@
 
 .renamethislater {
     text-align: center;
-    align-content: center;
     position: fixed;
-    top: 50%;
+    top: 30%;
     left: 50%;
     margin-top: -50px;
     margin-left: -100px;
 
 }
-
+.h1 {
+    text-align: center;
+    
+} 
 
 #generatedPasswordTextStringBox {
-    position: relative;
-    top: -9px;
+    text-align: center;
+    align-content: center;
+    /* height: 200px;
+    max-height: 200px; */
+   
 } 
+
+/*
+#numbersInPasswordCheckbox, #numbersInPasswordLabel{
+    text-align: center;
+    align-content: center;
+   
+} 
+
+#symbolsInPasswordCheckbox, #symbolsInPasswordLabel {
+    text-align: center;
+    align-content: center;
+   
+}  */
