@@ -16,6 +16,7 @@ function generatePasswordStringFunction()
     let passwordLengthNumber = document.querySelector("#passwordLengthSelect option:checked").value;
     let numbersCheckbox = document.querySelector("#numbersInPasswordCheckbox");
     let symbolsCheckbox = document.querySelector("#symbolsInPasswordCheckbox");
+    let generatedPasswordTextArea = document.querySelector("#generatedPasswordTextStringBox");
     let mergedCharacters = "";
     let finalGeneratedPassword = "";
     let charactersLength = mergedCharacters.length;
@@ -38,19 +39,20 @@ function generatePasswordStringFunction()
     if (numbersCheckbox.checked == true && symbolsCheckbox.checked == true) {
         
         mergedCharacters = characters.concat(numbers, symbols);
-        charactersLength = mergedCharacters.length;
+        charactersLength = mergedCharacters.length; 
         
     }
 
     for (let i = 0; i < passwordLengthNumber; i++) {
         finalGeneratedPassword += mergedCharacters.charAt(Math.floor(Math.random() * charactersLength));
-        
+        generatedPasswordTextArea.value = finalGeneratedPassword;
     }
 
     if (numbersCheckbox.checked == false && symbolsCheckbox.checked == false) {
         charactersLength = characters.length;
         for (let i = 0; i < passwordLengthNumber; i++) {
             finalGeneratedPassword += characters.charAt(Math.floor(Math.random() * charactersLength));
+            generatedPasswordTextArea.value = finalGeneratedPassword;
             
         }
     }
