@@ -1,10 +1,10 @@
 /* Sehun Babatunde */
 
-.renamethislater {
+.baseSection {
     text-align: center;
     position: fixed;
     top: 30%;
-    left: 50%;
+    left: 45%;
     margin-top: -50px;
     margin-left: -100px;
 
@@ -16,9 +16,8 @@
 
 #generatedPasswordTextStringBox {
     text-align: center;
-    align-content: center;
-    /* height: 200px;
-    max-height: 200px; */
+    width: 400px;
+    /* max-height: 200px;  */
    
 } 
 
@@ -34,3 +33,9 @@
     align-content: center;
    
 }  */
+
+
+/* body {
+    background-color: black;
+    color: white;
+  } */
