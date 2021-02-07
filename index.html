@@ -16,6 +16,10 @@
         <div class="TitleClass">
             <p class="h1">Sehun's Password Generator &#128513;</p>
         </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="darkModeSwitch" onclick="enableDarkMode">
+            <label class="form-check-label" for="darkModeSwitchLabel">Dark Mode?</label>
+        </div>
 
         <div class="baseSection">
             <form>
@@ -128,8 +132,17 @@
               <label class="form-check-label" for="symbolsInPasswordLabel" id="symbolsInPasswordLabel" >Symbols in your Password?</label>  
             <label for="generatedPasswordTextLabel"></label>
             <textarea class="form-control" id="generatedPasswordTextStringBox" name="generatedPasswordTextStringBox"></textarea>  <br> 
-            <button type="button" class="btn btn-primary"  id="generatePasswordButton" onclick="generatePasswordStringFunction">Generate Password!</button> 
+             <button type="button" class="btn btn-primary"  id="generatePasswordButton" onclick="generatePasswordStringFunction">Generate Password!</button> 
+            <button type="button" class="btn btn-light"  id="copyPasswordButton" onclick="copyPasswordFunction">Copy Password</button> 
+           
             </form>
+        </div>
+        
+
+        <div class="footer">
+            <p class="text-center"> </p> <br>
+            <p class="text-center"> &#169; Copyright 2021 - <script>document.write(new Date().getFullYear());</script>, Sehun Babatunde </p>
+           <!-- Thanks: http://updateyourfooter.com/ -->
         </div>
        
         <script src="./js/script.js" ></script>
