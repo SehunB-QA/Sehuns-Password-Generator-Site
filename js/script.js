@@ -57,7 +57,7 @@ function generatePasswordStringFunction()
         }
     }
 
-    console.log(finalGeneratedPassword);
+    //console.log(finalGeneratedPassword);
     return finalGeneratedPassword;
 
     //console.log(mergedCharacters);
