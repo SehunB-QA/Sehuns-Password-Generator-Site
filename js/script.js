@@ -39,7 +39,7 @@ function generatePasswordStringFunction()
     if (numbersCheckbox.checked == true && symbolsCheckbox.checked == true) {
         
         mergedCharacters = characters.concat(numbers, symbols);
-        charactersLength = mergedCharacters.length;
+        charactersLength = mergedCharacters.length; 
         
     }
 
