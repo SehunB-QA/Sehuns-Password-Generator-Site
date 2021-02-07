@@ -9,14 +9,18 @@
                                  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_display_checkbox_text 
                                  https://stackoverflow.com/questions/14333797/finding-which-option-is-selected-in-select-without-jquery
                                  https://www.w3schools.com/jsref/prop_select_value.asp
+                                 https://www.hashbangcode.com/article/using-javascript-select-textarea-text
+                                 https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
+                                 https://www.w3schools.com/js/js_htmldom_css.asp
                                  */
 
+let generatedPasswordTextArea = document.querySelector("#generatedPasswordTextStringBox");
 function generatePasswordStringFunction()
 {
     let passwordLengthNumber = document.querySelector("#passwordLengthSelect option:checked").value;
     let numbersCheckbox = document.querySelector("#numbersInPasswordCheckbox");
     let symbolsCheckbox = document.querySelector("#symbolsInPasswordCheckbox");
-    let generatedPasswordTextArea = document.querySelector("#generatedPasswordTextStringBox");
+   
     let mergedCharacters = "";
     let finalGeneratedPassword = "";
     let charactersLength = mergedCharacters.length;
@@ -65,6 +69,41 @@ function generatePasswordStringFunction()
     
 }
 
+function copyPasswordFunction()
+{
+    let copyPasswordText = generatedPasswordTextArea;
+    copyPasswordText.select();
+    copyPasswordText.setSelectionRange(0, 99999); /* For mobile devices */
+    document.execCommand("copy");
+}
 
- document.querySelector("button#generatePasswordButton").addEventListener("click", generatePasswordStringFunction);
+function enableDarkMode()
+{
+    let darkModeSwitch = document.querySelector("#darkModeSwitch");
+
+    if (darkModeSwitch.checked == true) {
+        
+   
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    document.querySelector("p").style.color = "white";
+    } 
+
+    if (darkModeSwitch.checked == false) {
+        
+   
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        document.querySelector("p").style.color = "black";
+    } 
+    
+
+}
+
+
+
+document.querySelector("button#generatePasswordButton").addEventListener("click", generatePasswordStringFunction);
+document.querySelector("#copyPasswordButton").addEventListener("click", copyPasswordFunction);
+document.querySelector("#darkModeSwitch").addEventListener("click", enableDarkMode);
+//enableDarkMode();
 
